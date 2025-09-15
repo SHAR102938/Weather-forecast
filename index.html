@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Weather Broadcast</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background" id="background"></div>
+    <div class="container">
+        <h1>Real-Time Weather Broadcast</h1>
+        <div class="controls">
+            <div class="search">
+                <input type="text" id="city-input" placeholder="Enter city name">
+                <button id="get-weather">Get Weather</button>
+                <button id="get-location">Use My Location</button>
+            </div>
+            <div class="unit-toggle">
+                <label for="unit-select">Units:</label>
+                <select id="unit-select">
+                    <option value="metric">Celsius</option>
+                    <option value="imperial">Fahrenheit</option>
+                </select>
+            </div>
+        </div>
+        <div id="weather-display" class="weather-display">
+            <div class="current-weather">
+                <div class="weather-icon">
+                    <img id="weather-icon" src="" alt="Weather Icon">
+                </div>
+                <div class="weather-info">
+                    <h2 id="city-name"></h2>
+                    <p id="temperature"></p>
+                    <p id="description"></p>
+                    <p id="humidity"></p>
+                    <p id="wind-speed"></p>
+                    <p id="sunrise-sunset"></p>
+                    <p id="air-quality"></p>
+                </div>
+            </div>
+            <div id="alerts" class="alerts"></div>
+            <div id="forecast" class="forecast">
+                <h3>3-Day Forecast</h3>
+                <div class="forecast-container" id="forecast-container"></div>
+            </div>
+        </div>
+        <div id="error-message" class="error"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
